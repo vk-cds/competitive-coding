@@ -1,0 +1,33 @@
+//reverse the array
+
+#include<iostream>
+using namespace std;
+int main()
+{
+    int A[50],n ,start,end;
+    cout<<"enter the size of array ";
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>A[i];
+    }
+    
+    cout<<"original array ";
+   for(int i=0;i<n;i++)
+   cout<<A[i]<<" ";
+    start=0; end=n-1;
+    while (start<end)
+    {
+      int temp= A[start];
+      A[start]=A[end];
+      A[end]=temp;
+      start++;
+      end--;
+   }
+
+   cout<<"\nreversed array ";
+   for(int i=0;i<n;i++)
+   cout<<A[i]<<" ";
+
+   return 0;
+}
